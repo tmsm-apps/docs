@@ -7,17 +7,17 @@ Smart Duration Field stores duration values as seconds, but Jira can parse famil
 Use a Smart Duration field in standard JQL comparisons:
 
 ```jql
-"Original analysis estimate" >= 7w
+"Analysis budget" >= 7w
 ```
 
 Additional examples:
 
 ```jql
-"Original analysis estimate" = 5d
-"Original analysis estimate" > "1w 2d"
-"Original analysis estimate" <= 40h
-"Original analysis estimate" IS EMPTY
-ORDER BY "Original analysis estimate" ASC
+"Analysis budget" = 5d
+"Analysis budget" > "1w 2d"
+"Analysis budget" <= 40h
+"Analysis budget" IS EMPTY
+ORDER BY "Analysis budget" ASC
 ```
 
 The meaning of `w` and `d` follows the app configuration. By default:
@@ -42,7 +42,7 @@ These functions filter issues. They do not return the numerical difference betwe
 Use `smartDurationOverrun` to find issues where more time has been logged than allowed by the Smart Duration field.
 
 ```jql
-issue in smartDurationOverrun("Original analysis estimate")
+issue in smartDurationOverrun("Analysis budget")
 ```
 
 Example:
@@ -60,7 +60,7 @@ This can be used to find exceeded analysis budgets or work that took longer than
 Use `smartDurationRemaining` to find issues where Time Spent is still below the Smart Duration value.
 
 ```jql
-issue in smartDurationRemaining("Original analysis estimate")
+issue in smartDurationRemaining("Analysis budget")
 ```
 
 Example:
@@ -78,7 +78,7 @@ The function does not calculate or display the remaining duration. It only ident
 Use `smartDurationOnTarget` to find issues where Time Spent is exactly equal to the Smart Duration value.
 
 ```jql
-issue in smartDurationOnTarget("Original analysis estimate")
+issue in smartDurationOnTarget("Analysis budget")
 ```
 
 Example:
