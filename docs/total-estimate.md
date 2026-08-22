@@ -15,21 +15,7 @@ Jira Cloud's native Formula field can add these Smart Duration values. Smart Dur
 3. Choose the **Formula** field type.
 4. Name the field **Total estimate**.
 5. Select **Duration** as the formula output.
-6. Enter the formula and create the field.
-
-Start with:
-
-```text
-SUM(
-  {Analysis estimate},
-  {Development estimate},
-  {Test estimate}
-)
-```
-
-## Treat empty estimates as zero
-
-If Jira returns an empty result when one of the source fields is empty, use:
+6. Enter the following formula and create the field:
 
 ```text
 SUM(

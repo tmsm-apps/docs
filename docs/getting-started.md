@@ -14,28 +14,15 @@ Depending on your Jira navigation, the page may still be named **Custom fields**
 2. Search for **Smart Duration**.
 3. Select the Smart Duration field type and choose **Next**.
 
-![Select the Smart Duration custom field type](assets/create-smart-duration-field.png)
-
 !!! note
 
     Development installations display a **DEVELOPMENT** label beside the field type. Marketplace installations do not use that development label.
 
-## 3. Name the field
-
-Use a name that describes what the duration controls. Examples include:
-
-- **Analysis estimate**
-- **Development estimate**
-- **Test estimate**
-- **Analysis budget**
-
-Add a description that tells users what should be entered, then select **Create**.
-
-## 4. Add the field to screens
+## 3. Add the field to screens
 
 Select the create, edit, and view screens where the field should be available. If the field does not appear on a work item, check both its screen assignment and its field context.
 
-## 5. Synchronize the app settings
+## 4. Synchronize the app settings
 
 After adding a new Smart Duration field or a new field context:
 
