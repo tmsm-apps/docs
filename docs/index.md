@@ -26,19 +26,35 @@ Smart Duration Field is a Forge app for Jira Cloud that stores durations as seco
 
 The examples use the default configuration of 8 working hours per day and 5 working days per week.
 
-## JQL example
+## JQL examples
+
+Search for work items using familiar duration values:
 
 ```jql
-"Original analysis estimate" >= 7w
+"Analysis budget" >= 7w
 ```
 
-## Time Spent comparison
+Compare the field with Jira Time Spent.
 
-Find issues where Time Spent is greater than the Smart Duration value:
+Find work items that exceeded their analysis budget:
 
 ```jql
-issue in smartDurationOverrun("Original analysis estimate")
+issue in smartDurationOverrun("Analysis budget")
 ```
+
+Find work items that still have time remaining:
+
+```jql
+issue in smartDurationRemaining("Analysis budget")
+```
+
+Find work items where Time Spent exactly matches the budget:
+
+```jql
+issue in smartDurationOnTarget("Analysis budget")
+```
+
+[See the full JQL reference](jql.md) for detailed behavior, examples, and edge cases.
 
 !!! note
 

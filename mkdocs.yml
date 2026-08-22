@@ -18,6 +18,7 @@ theme:
 
 nav:
   - Home: index.md
+  - JQL reference: jql.md
 
 markdown_extensions:
   - admonition
