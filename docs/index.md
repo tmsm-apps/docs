@@ -14,6 +14,7 @@ Smart Duration Field is a Forge app for Jira Cloud that stores durations as seco
 - Configure the number of working hours per day and working days per week.
 - Search duration values with JQL.
 - Compare Smart Duration values with Jira Time Spent.
+- Add several role estimates into one read-only Smart Duration Total.
 - Use the field on create, edit, transition, and issue view screens.
 - Export the formatted duration value.
 
@@ -25,7 +26,9 @@ A team can create several Smart Duration fields for different kinds of work, for
 - **Development estimate**
 - **Test estimate**
 
-Jira's native Formula field can then add them into a read-only **Total estimate**. See the [Total estimate guide](total-estimate.md).
+The app's read-only **Smart Duration Total** field can add them together. Empty
+estimates count as zero, and the total can also be compared with Time Spent. See the
+[Smart Duration Total guide](total-estimate.md).
 
 ## Supported input
 
@@ -73,7 +76,7 @@ issue in smartDurationOnTarget("Analysis budget")
 
 - [Create a Smart Duration custom field](getting-started.md)
 - [Set working hours per day and working days per week](settings.md)
-- [Create a Total estimate from several role estimates](total-estimate.md)
+- [Configure Smart Duration Total for several role estimates](total-estimate.md)
 
 !!! note
 

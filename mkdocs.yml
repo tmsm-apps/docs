@@ -20,7 +20,7 @@ nav:
   - Home: index.md
   - Getting started: getting-started.md
   - Global settings: settings.md
-  - Total estimate formula: total-estimate.md
+  - Smart Duration Total: total-estimate.md
   - JQL reference: jql.md
 
 markdown_extensions:

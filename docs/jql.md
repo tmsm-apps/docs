@@ -37,6 +37,15 @@ Smart Duration Field provides three JQL functions that compare the selected Smar
 
 These functions filter issues. They do not return the numerical difference between the two values.
 
+All three functions also support the app's read-only total field. For example:
+
+```jql
+issue in smartDurationOverrun("Smart Duration Total")
+```
+
+This compares Time Spent with the sum of the source fields selected in the app
+settings. See [Smart Duration Total](total-estimate.md).
+
 ## Overrun
 
 Use `smartDurationOverrun` to find issues where more time has been logged than allowed by the Smart Duration field.
@@ -114,6 +123,7 @@ Comparison results are updated when:
 
 - an issue is created,
 - a Smart Duration value changes,
+- a Smart Duration Total source selection is saved and the index is rebuilt,
 - a worklog is created,
 - a worklog is updated,
 - a worklog is deleted.

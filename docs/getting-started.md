@@ -48,3 +48,9 @@ Users can enter one or more units:
 Supported units are `w`, `d`, `h`, `m`, and `s`. Decimal commas are also accepted, for example `1,5h`.
 
 With the default calendar, `1d` is 8 hours and `1w` is 5 working days or 40 hours.
+
+## Add several estimates together
+
+After creating fields such as Analysis estimate, Development estimate, and Test
+estimate, use the app's read-only [Smart Duration Total](total-estimate.md) field to
+show their sum on each work item.

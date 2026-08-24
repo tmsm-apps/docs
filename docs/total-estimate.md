@@ -1,34 +1,79 @@
-# Create a Total estimate
+# Smart Duration Total
 
-Teams often split an estimate by role and still need one total value on the work item. For example:
+**Smart Duration Total** is a read-only field supplied by the app. It adds selected
+Smart Duration fields on the same work item and displays the result as a duration.
 
-- **Analysis estimate**
-- **Development estimate**
-- **Test estimate**
+For example, a team can use these editable fields:
 
-Jira Cloud's native Formula field can add these Smart Duration values. Smart Duration fields store seconds as numbers, so the total can be displayed as a duration.
+- **Analysis estimate** — `2d`
+- **Development estimate** — `5d`
+- **Test estimate** — `1d`
 
-## Create the formula field
+Smart Duration Total then shows `1w 3d` with the default 8-hour day and 5-day week.
+
+An empty source field counts as zero. The total is empty only when no source fields
+are configured.
+
+## 1. Make the total field available
+
+The app creates one **Smart Duration Total** field for the Jira site. A Jira
+administrator must make it available where users should see it.
+
+### Company-managed spaces
 
 1. Open **Settings → Work items → Fields**.
-2. Select **Create new field**.
-3. Choose the **Formula** field type.
-4. Name the field **Total estimate**.
-5. Select **Duration** as the formula output.
-6. Enter the following formula and create the field:
+2. Find **Smart Duration Total**.
+3. Open its actions menu and choose **Associate to screens**.
+4. Select the required view screens.
 
-```text
-SUM(
-  IF(IS_NONE({Analysis estimate}), 0, {Analysis estimate}),
-  IF(IS_NONE({Development estimate}), 0, {Development estimate}),
-  IF(IS_NONE({Test estimate}), 0, {Test estimate})
-)
+### Team-managed spaces
+
+1. Open **Space settings → Fields**.
+2. Select **Add field** and add **Smart Duration Total** to the space.
+3. Open **Space settings → Work types** and select a work type.
+4. Move **Smart Duration Total** from **Other fields** into the required section.
+5. Select **Save changes**.
+
+The field is calculated by the app and cannot be edited by users.
+
+## 2. Select the source fields
+
+1. Open the [Smart Duration Field settings](settings.md).
+2. In **Smart Duration Total**, select every Smart Duration field that should be
+   included.
+3. Select **Save total configuration**.
+4. Select **Save settings** once after installing or upgrading the app. This applies
+   the site's hours-per-day and days-per-week settings to the total field.
+5. Select **Rebuild JQL index** to calculate existing work items immediately.
+
+Later changes are recalculated automatically after Jira delivers the selected
+estimate's update event. Because the value is stored in Jira, opening a work item does
+not wait for a Forge calculation.
+
+## Use fields from several spaces
+
+The source selection applies to the whole Jira site. You can select Smart Duration
+fields whose contexts belong to different spaces. On each work item, only fields
+available in that work item's context have values; unavailable and empty fields count
+as zero.
+
+This makes one total field suitable for several teams even when they use separate
+role-estimate fields.
+
+## Compare the total with Time Spent
+
+The three comparison functions accept **Smart Duration Total** in the same way as an
+editable Smart Duration field:
+
+```jql
+issue in smartDurationOverrun("Smart Duration Total")
+issue in smartDurationRemaining("Smart Duration Total")
+issue in smartDurationOnTarget("Smart Duration Total")
 ```
 
-The formula only uses values from the same work item. It does not add values from subtasks, linked work items, or other issues.
+See the [JQL reference](jql.md) for the exact behavior of each function.
 
-!!! tip
+!!! note
 
-    Field availability in Jira's Formula editor can depend on the Jira rollout and field type support on your site. If a Smart Duration field is not offered by the editor, use Jira Automation as a fallback or contact support.
-
-See Atlassian's documentation for [creating a Formula field](https://support.atlassian.com/jira-cloud-administration/docs/create-a-formula-field/) and [supported formula functions](https://support.atlassian.com/jira-cloud-administration/docs/supported-functions-for-formulas/).
+    Smart Duration Total adds values from fields on the same work item. It does not
+    aggregate subtasks, linked work items, or child work items.

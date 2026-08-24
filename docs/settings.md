@@ -46,6 +46,19 @@ Select **Rebuild JQL index**:
 
 - after installing the app,
 - after creating a new Smart Duration field,
+- after changing the source fields used by Smart Duration Total,
 - or when existing issues are missing from Time Spent comparison results.
 
 Later changes are indexed automatically when a Smart Duration value or worklog changes. Updates can take a short time to appear in JQL.
+
+## Smart Duration Total sources
+
+The same page contains the global source selection for **Smart Duration Total**.
+Select the Smart Duration fields that should be added together and choose **Save
+total configuration**. Select **Save settings** once after installing or upgrading the
+app so the working calendar is synchronized to the new total field. Then rebuild the
+JQL index so existing work items receive the new total immediately.
+
+The source selection applies to the whole Jira site. Empty or unavailable source
+fields count as zero. For complete setup instructions, see
+[Smart Duration Total](total-estimate.md).
