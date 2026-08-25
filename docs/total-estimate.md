@@ -1,8 +1,8 @@
 # Smart Duration Total
 
 **Smart Duration Total** is a read-only field supplied by the app. It adds selected
-Smart Duration fields on the same work item and displays their exact sum in hours and
-equivalent Jira working days.
+Smart Duration fields on the same work item and displays their exact sum using Jira's
+global Time display format.
 
 For example, a team can use these editable fields:
 
@@ -10,12 +10,12 @@ For example, a team can use these editable fields:
 - **Development estimate** — `5d`
 - **Test estimate** — `1d`
 
-The editable fields display `16h`, `40h`, and `8h`. With an 8-hour Jira working day,
-Smart Duration Total shows their exact sum as `64h (8d)`. When only one source field
-contains `40h`, the total shows `40h (5d)`.
+With Jira's display format set to Hours, the editable fields display `16h`, `40h`,
+and `8h`, and Smart Duration Total shows `64h`. In Days mode it shows `8d`. In Pretty
+mode it shows `1w 3d` when Jira uses an 8-hour day and 5-day week.
 
-The stored value remains a number of seconds. The text in parentheses is display-only,
-so it does not change numeric ordering, JQL comparison, or the Time Spent functions.
+The stored value remains a number of seconds. Changing the display format does not
+change numeric ordering, JQL comparison, or the Time Spent functions.
 
 An empty source field counts as zero. The total is empty only when no source fields
 are configured.

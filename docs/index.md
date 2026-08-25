@@ -11,7 +11,7 @@ Smart Duration Field is a Forge app for Jira Cloud that stores durations as seco
 
 - Enter durations using weeks, days, hours, minutes, and seconds.
 - Combine units, for example `1w 2d 4h 30m`.
-- Automatically use Jira's global working hours per day and working days per week.
+- Automatically use Jira's global working calendar and Time display format.
 - Search duration values with JQL.
 - Compare Smart Duration values with Jira Time Spent.
 - Add several role estimates into one read-only Smart Duration Total.

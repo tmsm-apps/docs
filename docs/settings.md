@@ -1,7 +1,7 @@
 # Jira working-time calendar
 
-Smart Duration Field automatically uses Jira's global time-tracking calendar. There
-is no separate hours-per-day or days-per-week setting in the app.
+Smart Duration Field automatically uses Jira's global time-tracking calendar and
+time display format. There are no duplicate working-time or display settings in the app.
 
 Jira commonly starts with:
 
@@ -28,10 +28,24 @@ field context. The app also refreshes it automatically every hour.
 2. Under **Work item features**, open **Time tracking**.
 3. Select **Edit global settings**.
 4. Change **Working hours per day** or **Working days per week** and save Jira's settings.
+   You can also choose Jira's **Time display format**: Pretty, Days, or Hours.
 5. Either wait for the hourly synchronization or open the Smart Duration Field
    configuration page to apply the change immediately.
 
 Decimal values are supported by Jira, so a working day can be `7.5` hours.
+
+## Time display formats
+
+Smart Duration fields and Smart Duration Total follow Jira's selection:
+
+| Jira format | Smart Duration example for 65 hours at 8h/day and 5d/week |
+|---|---:|
+| Pretty | `1w 3d 1h` |
+| Days | `8.13d` |
+| Hours | `65h` |
+
+The Pretty format uses compact, language-independent unit symbols so values remain
+valid for CSV re-import and every supported Jira locale.
 
 !!! warning
 
