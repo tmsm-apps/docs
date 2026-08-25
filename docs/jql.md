@@ -20,10 +20,22 @@ Additional examples:
 ORDER BY "Analysis budget" ASC
 ```
 
-The meaning of `w` and `d` follows the app configuration. By default:
+In standard JQL, Jira evaluates `w` and `d` with the default 8-hour day and
+5-day week:
 
 - `1d` equals 8 hours.
 - `1w` equals 5 working days or 40 hours.
+
+If the app uses a non-default working calendar, use explicit hours, minutes, or
+seconds in standard JQL. For example, when the app is configured with a 10-hour
+day, search for one configured day as `10h`:
+
+```jql
+"Analysis budget" = 10h
+```
+
+The issue editor still interprets `1d` and `1w` using the configured working
+calendar. This restriction applies only to duration literals in standard JQL.
 
 ## Compare a duration with Time Spent
 
