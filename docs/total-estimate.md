@@ -1,7 +1,8 @@
 # Smart Duration Total
 
 **Smart Duration Total** is a read-only field supplied by the app. It adds selected
-Smart Duration fields on the same work item and displays their exact sum in total hours.
+Smart Duration fields on the same work item and displays their exact sum in hours and
+equivalent Jira working days.
 
 For example, a team can use these editable fields:
 
@@ -9,9 +10,12 @@ For example, a team can use these editable fields:
 - **Development estimate** — `5d`
 - **Test estimate** — `1d`
 
-The editable fields display `16h`, `40h`, and `8h`. Smart Duration Total shows
-their exact sum, `64h`. When only one source field contains `40h`, the total also
-shows `40h`.
+The editable fields display `16h`, `40h`, and `8h`. With an 8-hour Jira working day,
+Smart Duration Total shows their exact sum as `64h (8d)`. When only one source field
+contains `40h`, the total shows `40h (5d)`.
+
+The stored value remains a number of seconds. The text in parentheses is display-only,
+so it does not change numeric ordering, JQL comparison, or the Time Spent functions.
 
 An empty source field counts as zero. The total is empty only when no source fields
 are configured.
@@ -44,8 +48,8 @@ The field is calculated by the app and cannot be edited by users.
 2. In **Smart Duration Total**, select every Smart Duration field that should be
    included.
 3. Select **Save total configuration**.
-4. Select **Save settings** once after installing or upgrading the app. This applies
-   the site's hours-per-day and days-per-week settings to the total field.
+4. Opening the page synchronizes Jira's hours-per-day and days-per-week values to the
+   total field.
 5. Select **Rebuild JQL index** to calculate existing work items immediately.
 
 Later changes are recalculated automatically after Jira delivers the selected

@@ -5,13 +5,13 @@ Enter, display, and search Jira durations using familiar values such as `2w`, `5
 Smart Duration Field is a Forge app for Jira Cloud that stores durations as seconds while presenting them in a format that people can easily understand and edit.
 
 [Create your first field](getting-started.md){ .md-button .md-button--primary }
-[Configure working time](settings.md){ .md-button }
+[Jira working-time calendar](settings.md){ .md-button }
 
 ## Key features
 
 - Enter durations using weeks, days, hours, minutes, and seconds.
 - Combine units, for example `1w 2d 4h 30m`.
-- Configure the number of working hours per day and working days per week.
+- Automatically use Jira's global working hours per day and working days per week.
 - Search duration values with JQL.
 - Compare Smart Duration values with Jira Time Spent.
 - Add several role estimates into one read-only Smart Duration Total.
@@ -75,7 +75,7 @@ issue in smartDurationOnTarget("Analysis budget")
 ## Administration
 
 - [Create a Smart Duration custom field](getting-started.md)
-- [Set working hours per day and working days per week](settings.md)
+- [Use Jira's working-time calendar](settings.md)
 - [Configure Smart Duration Total for several role estimates](total-estimate.md)
 
 !!! note

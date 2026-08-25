@@ -1,50 +1,56 @@
-# Global working-time settings
+# Jira working-time calendar
 
-Smart Duration Field uses one working-time configuration for every Smart Duration field on the Jira site.
+Smart Duration Field automatically uses Jira's global time-tracking calendar. There
+is no separate hours-per-day or days-per-week setting in the app.
 
-The defaults are:
+Jira commonly starts with:
 
 | Setting | Default |
 |---|---:|
 | Working hours per day | 8 |
 | Working days per week | 5 |
 
-With these defaults, `1d` equals 8 hours and `1w` equals 40 hours.
+With these values, `1d` equals 8 hours and `1w` equals 40 hours.
 
-## Open the settings
+## Open the app settings
 
 1. In Jira, open **Apps → Manage apps**.
 2. Open **Connected apps** when Jira redirects you to Atlassian Administration.
 3. Find **Smart Duration Field**.
 4. Open its actions menu and select **Configure**.
 
-The exact navigation labels may vary slightly as Atlassian updates Jira administration.
+The page reads Jira's current calendar and synchronizes it to every Smart Duration
+field context. The app also refreshes it automatically every hour.
 
-## Change the working calendar
+## Change the working calendar in Jira
 
-1. Enter a positive number in **Working hours per day**.
-2. Enter a positive number in **Working days per week**.
-3. Select **Save settings**.
+1. Open **Jira settings → Work items**.
+2. Under **Work item features**, open **Time tracking**.
+3. Select **Edit global settings**.
+4. Change **Working hours per day** or **Working days per week** and save Jira's settings.
+5. Either wait for the hourly synchronization or open the Smart Duration Field
+   configuration page to apply the change immediately.
 
-Decimal values are supported, so a working day can be configured as `7.5` hours.
-
-![Global Smart Duration Field settings](assets/global-settings.png)
+Decimal values are supported by Jira, so a working day can be `7.5` hours.
 
 !!! warning
 
-    Changing the working calendar does not rewrite stored seconds. It changes how `w` and `d` are interpreted in issue editors. Values displayed as total hours remain unchanged.
+    Changing Jira's working calendar does not rewrite stored seconds. It changes how
+    `w` and `d` are interpreted for newly entered values. Existing absolute hours stay
+    unchanged.
 
-For example, a stored value of 144,000 seconds is always displayed as `40h`.
-With an 8-hour day and 5-day week, entering `1w` produces those 40 hours. With a
-9-hour day and 5-day week, entering `1w` produces 45 hours instead.
+For example, a stored value of 144,000 seconds always remains `40h`. With an 8-hour
+day and 5-day week, entering `1w` produces those 40 hours. With a 9-hour day and
+5-day week, a newly entered `1w` produces 45 hours instead.
 
-For standard JQL searches on a non-default calendar, use explicit hours instead
-of `w` or `d`. For example, search for one configured 10-hour day as `10h`. See
-the [JQL reference](jql.md) for details.
+For standard JQL searches on a non-default Jira calendar, use explicit hours instead
+of `w` or `d`. For example, search for one 10-hour Jira working day as `10h`. See the
+[JQL reference](jql.md) for details.
 
 ## After creating another field or context
 
-Select **Save settings** again after creating a new Smart Duration field or field context. This synchronizes the global values to that new context.
+The new context is synchronized automatically within an hour. To use it immediately,
+open the Smart Duration Field configuration page once and then reload the work item.
 
 ## Time Spent comparison index
 
@@ -55,15 +61,16 @@ Select **Rebuild JQL index**:
 - after changing the source fields used by Smart Duration Total,
 - or when existing issues are missing from Time Spent comparison results.
 
-Later changes are indexed automatically when a Smart Duration value or worklog changes. Updates can take a short time to appear in JQL.
+Later changes are indexed automatically when a Smart Duration value or worklog
+changes. Updates can take a short time to appear in JQL.
 
 ## Smart Duration Total sources
 
 The same page contains the global source selection for **Smart Duration Total**.
 Select the Smart Duration fields that should be added together and choose **Save
-total configuration**. Select **Save settings** once after installing or upgrading the
-app so the working calendar is synchronized to the new total field. Then rebuild the
-JQL index so existing work items receive the new total immediately.
+total configuration**. Opening the page also synchronizes Jira's working calendar to
+the total field. Then rebuild the JQL index so existing work items receive the new
+total immediately.
 
 The source selection applies to the whole Jira site. Empty or unavailable source
 fields count as zero. For complete setup instructions, see

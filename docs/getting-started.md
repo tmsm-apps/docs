@@ -22,16 +22,17 @@ Depending on your Jira navigation, the page may still be named **Custom fields**
 
 Select the create, edit, and view screens where the field should be available. If the field does not appear on a work item, check both its screen assignment and its field context.
 
-## 4. Synchronize the app settings
+## 4. Synchronize Jira's working calendar
 
 After adding a new Smart Duration field or a new field context:
 
 1. Open the [Smart Duration Field settings](settings.md).
-2. Confirm the working-time values.
-3. Select **Save settings**, even if the values did not change.
-4. Select **Rebuild JQL index** if you want to use the Time Spent comparison functions.
+2. Confirm that Jira's working-time values are shown.
+3. Select **Rebuild JQL index** if you want to use the Time Spent comparison functions.
 
-Saving synchronizes the global working-time settings to every existing Smart Duration field context. Rebuilding indexes existing values for the comparison functions.
+Opening the settings synchronizes Jira's global time-tracking calendar to every
+existing Smart Duration field context. The same synchronization runs automatically
+every hour. Rebuilding indexes existing values for the comparison functions.
 
 ## Enter a value
 
@@ -47,7 +48,7 @@ Users can enter one or more units:
 
 Supported units are `w`, `d`, `h`, `m`, and `s`. Decimal commas are also accepted, for example `1,5h`.
 
-With the default calendar, `1d` is 8 hours and `1w` is 5 working days or 40 hours.
+With Jira set to 8 hours per day and 5 days per week, `1d` is 8 hours and `1w` is 40 hours.
 
 ## Add several estimates together
 
