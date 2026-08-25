@@ -1,7 +1,7 @@
 # Smart Duration Total
 
 **Smart Duration Total** is a read-only field supplied by the app. It adds selected
-Smart Duration fields on the same work item and displays the result as a duration.
+Smart Duration fields on the same work item and displays their exact sum in total hours.
 
 For example, a team can use these editable fields:
 
@@ -9,7 +9,9 @@ For example, a team can use these editable fields:
 - **Development estimate** — `5d`
 - **Test estimate** — `1d`
 
-Smart Duration Total then shows `1w 3d` with the default 8-hour day and 5-day week.
+The editable fields display `16h`, `40h`, and `8h`. Smart Duration Total shows
+their exact sum, `64h`. When only one source field contains `40h`, the total also
+shows `40h`.
 
 An empty source field counts as zero. The total is empty only when no source fields
 are configured.

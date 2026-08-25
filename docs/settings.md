@@ -32,9 +32,11 @@ Decimal values are supported, so a working day can be configured as `7.5` hours.
 
 !!! warning
 
-    Changing the working calendar does not rewrite stored seconds. It changes how `w` and `d` are interpreted for new input and JQL, and how existing values are displayed.
+    Changing the working calendar does not rewrite stored seconds. It changes how `w` and `d` are interpreted for new input and JQL. Values displayed as total hours remain unchanged.
 
-For example, a stored value of 144,000 seconds is displayed as `1w` with an 8-hour day and 5-day week. With a 9-hour day and 5-day week, the same stored value is displayed as `4d 4h`.
+For example, a stored value of 144,000 seconds is always displayed as `40h`.
+With an 8-hour day and 5-day week, entering `1w` produces those 40 hours. With a
+9-hour day and 5-day week, entering `1w` produces 45 hours instead.
 
 ## After creating another field or context
 
