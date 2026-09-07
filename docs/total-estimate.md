@@ -52,6 +52,22 @@ The field is calculated by the app and cannot be edited by users.
    total field.
 5. Select **Rebuild JQL index** to calculate existing work items immediately.
 
+During the first setup, all Smart Duration fields that already exist are preselected.
+This is only a suggestion: the Total configuration is not activated until an
+administrator selects **Save total configuration**.
+
+## Fields created later
+
+New Smart Duration fields are never added to Total automatically. When the settings
+page detects a new field, it displays a warning above **Source fields**.
+
+- Select **Add new fields to total** to add the detected fields to the selection.
+- Review the selection and select **Save total configuration** to apply it.
+- To keep the new fields excluded, leave the selection unchanged and save it.
+
+**Add new fields to total** only changes the selection on the page. It does not
+change Total values until the configuration is saved.
+
 Later changes are recalculated automatically after Jira delivers the selected
 estimate's update event. Because the value is stored in Jira, opening a work item does
 not wait for a Forge calculation.
