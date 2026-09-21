@@ -1,5 +1,5 @@
-site_name: Smart Duration Field
-site_description: Enter, display, and search Jira durations naturally.
+site_name: TMSM Jira Apps
+site_description: Documentation for TMSM Jira Cloud apps.
 site_url: https://tmsm-apps.github.io/docs/
 repo_url: https://github.com/tmsm-apps/docs
 
@@ -18,10 +18,16 @@ theme:
 
 nav:
   - Home: index.md
-  - Getting started: getting-started.md
-  - Global settings: settings.md
-  - Smart Duration Total: total-estimate.md
-  - JQL reference: jql.md
+  - Smart Duration Field:
+      - Getting started: getting-started.md
+      - Global settings: settings.md
+      - Smart Duration Total: total-estimate.md
+      - JQL reference: jql.md
+  - FieldWas:
+      - Overview: fieldwas/index.md
+      - Getting started: fieldwas/getting-started.md
+      - JQL reference: fieldwas/jql.md
+      - Supported field types: fieldwas/field-types.md
 
 markdown_extensions:
   - admonition
