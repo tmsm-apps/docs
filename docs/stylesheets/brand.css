@@ -1,0 +1,6 @@
+.md-header__button.md-logo { align-items: center; display: flex; }
+.md-header__button.md-logo::after { align-items: center; background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.32); border-radius: 7px; color: #fff; content: attr(data-brand-mark); display: inline-flex; font-size: .95rem; font-weight: 800; height: 1.55rem; justify-content: center; letter-spacing: -.08em; width: 1.55rem; }
+html[data-app-brand="fieldwas"] { --md-primary-fg-color: #101214; --md-accent-fg-color: #6554c0; }
+html[data-app-brand="fieldwas"] .md-header__button.md-logo::after { background: #6554c0; border-color: #8f84e8; }
+html[data-app-brand="smart-duration"] { --md-primary-fg-color: #006f7a; --md-accent-fg-color: #e38300; }
+html[data-app-brand="smart-duration"] .md-header__button.md-logo::after { background: #e38300; border-color: #ffc267; }
