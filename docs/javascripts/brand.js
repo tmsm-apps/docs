@@ -11,10 +11,16 @@
     element.textContent = names[app];
   });
 
-  document.querySelectorAll(".md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item").forEach((section) => {
-    const isFieldWasSection = section.textContent.includes("FieldWas");
-    const isSmartDurationSection = section.textContent.includes("Smart Duration Field");
-    section.hidden = (app === "fieldwas" && isSmartDurationSection)
-      || (app === "smart-duration" && isFieldWasSection);
-  });
+  function filterNavigation() {
+    document.querySelectorAll(".md-sidebar--primary li").forEach((item) => {
+      const label = item.querySelector(":scope > label, :scope > a");
+      const title = label && label.textContent.trim();
+      item.hidden = (app === "fieldwas" && title === "Smart Duration Field")
+        || (app === "smart-duration" && title === "FieldWas");
+    });
+  }
+
+  filterNavigation();
+  window.setTimeout(filterNavigation, 100);
+  window.setTimeout(filterNavigation, 500);
 }());
