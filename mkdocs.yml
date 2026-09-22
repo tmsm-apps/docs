@@ -35,3 +35,9 @@ markdown_extensions:
   - tables
   - toc:
       permalink: true
+
+extra_css:
+  - stylesheets/brand.css
+
+extra_javascript:
+  - javascripts/brand.js
