@@ -15,8 +15,10 @@
     document.querySelectorAll(".md-sidebar--primary li").forEach((item) => {
       const label = item.querySelector(":scope > label, :scope > a");
       const title = label && label.textContent.trim();
-      item.hidden = (app === "fieldwas" && title === "Smart Duration Field")
+      const shouldHide = (app === "fieldwas" && title === "Smart Duration Field")
         || (app === "smart-duration" && title === "FieldWas");
+      item.hidden = false;
+      item.style.display = shouldHide ? "none" : "";
     });
   }
 
