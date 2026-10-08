@@ -9,10 +9,6 @@ FieldWas currently supports these native Jira custom-field types.
 | People and groups | User Picker (single); User Picker (multiple); Group Picker (single); Group Picker (multiple) |
 | Releases and projects | Version Picker (single); Version Picker (multiple); Project Picker (single) |
 
-For checkboxes, multiple-select fields, labels, multiple user pickers, multiple
-group pickers, and multiple version pickers, one matching selected member is
-enough.
+For checkboxes, multiple-select fields, labels, multiple user pickers, multiple group pickers, and multiple version pickers, one matching selected member is enough.
 
-Rich text, Assets, Formula, Team, and third-party object fields are not
-currently supported. FieldWas shows an actionable error for an unsupported field
-instead of returning an incomplete result.
+Rich text, Assets, Formula, Team, and third-party object fields are not currently supported. FieldWas shows an actionable error for an unsupported field instead of returning an incomplete result.

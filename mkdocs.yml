@@ -19,7 +19,6 @@ theme:
 nav:
   - Home: index.md
   - Smart Duration Field:
-      - Overview: smart-duration.md
       - Getting started: getting-started.md
       - Global settings: settings.md
       - Smart Duration Total: total-estimate.md
