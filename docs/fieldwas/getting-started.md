@@ -27,3 +27,10 @@ issue in fieldWas("Customer tier", "Gold", "2026-09-01", "2026-10-01", "PAY")
 ```
 
 The start of the period is included and the end is excluded. See the [JQL reference](jql.md) for all argument formats and matching rules.
+
+To search several projects, separate up to ten uppercase project keys with
+commas inside the final quoted argument:
+
+```jql
+issue in fieldWas("Customer tier", "Gold", "2026-09-01", "2026-10-01", "PAY, OPS, CRM")
+```

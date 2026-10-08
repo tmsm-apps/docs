@@ -3,7 +3,7 @@
 ## Function syntax
 
 ```jql
-issue in fieldWas(field, value, after, before, projectKey)
+issue in fieldWas(field, value, after, before, projectKeys)
 ```
 
 | Argument | What to enter |
@@ -12,11 +12,23 @@ issue in fieldWas(field, value, after, before, projectKey)
 | `value` | Exact value shown by Jira, or a canonical ID when required. |
 | `after` | Start of the period; this time is included. |
 | `before` | End of the period; this time is excluded. |
-| `projectKey` | Jira project key to search. |
+| `projectKeys` | One Jira project key, or up to ten uppercase keys separated by commas. |
 
 ## Dates and times
 
 Use UTC dates such as `"2026-09-01"`, timezone-aware date-times such as `"2026-09-01T09:00:00Z"`, `"now"`, or elapsed periods such as `"-30m"`, `"-12h"`, `"-30d"`, and `"-4w"`.
+
+## Search several projects
+
+Put a comma-separated list inside the final quoted argument. Existing
+single-project queries continue to work.
+
+```jql
+issue in fieldWas("Customer tier", "Gold", "-30d", "now", "PAY, OPS, CRM")
+```
+
+You can enter up to ten unique project keys. The selected projects may contain
+at most 1,000 work items in total.
 
 ## Examples
 

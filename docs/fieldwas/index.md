@@ -16,6 +16,7 @@ issue in fieldWas("Customer tier", "Gold", "-30d", "now", "PAY")
 ## Key features
 
 - Find work items that held a value during a time period, even when the value has since changed.
+- Search one project or a comma-separated list of up to ten projects.
 - Works with 19 native Jira custom-field types, including select lists, text, dates, users, groups, versions, labels, and projects.
 - Uses Jira work-item history and does not change work items.
 - Combine the result with the rest of your normal JQL.
@@ -29,4 +30,4 @@ AND statusCategory != Done
 
 !!! note
 
-    FieldWas is currently a bounded pilot. Each query searches one named project and up to 1,000 work items visible to the person running it.
+    FieldWas is currently a bounded pilot. Each query searches one to ten named projects and up to 1,000 work items in total across those projects.
