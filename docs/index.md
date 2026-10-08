@@ -12,6 +12,8 @@ Spent and calculate a total from several duration fields.
 
 ## FieldWas
 
+![FieldWas logo](assets/fieldwas-logo.png){ .app-card-logo }
+
 Search for work items that held a custom-field value in the past. For example,
 find work that was once assigned to a team, had a particular label, or was
 planned for a release during a selected period.

@@ -1,5 +1,7 @@
 # FieldWas for Jira
 
+![FieldWas logo](../assets/fieldwas-logo.png){ .fieldwas-product-logo }
+
 Find work items that held a custom-field value at any time in a selected period.
 
 FieldWas adds historical custom-field search to Jira Cloud. Use it when the
