@@ -11,15 +11,20 @@
     element.textContent = names[app];
   });
 
-  if (isFieldWas) {
+  const logoFiles = {
+    fieldwas: "fieldwas-logo.png",
+    "smart-duration": "smart-duration-logo.png",
+  };
+
+  if (logoFiles[app]) {
     const logoUrl = path.startsWith("/docs/")
-      ? "/docs/assets/fieldwas-logo.png"
-      : "/assets/fieldwas-logo.png";
+      ? `/docs/assets/${logoFiles[app]}`
+      : `/assets/${logoFiles[app]}`;
 
     document.querySelectorAll(".md-header__button.md-logo, .md-nav__button.md-logo").forEach((element) => {
       const image = document.createElement("img");
       image.src = logoUrl;
-      image.alt = "FieldWas";
+      image.alt = names[app];
       element.replaceChildren(image);
     });
 

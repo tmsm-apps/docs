@@ -4,6 +4,8 @@ Choose the Jira Cloud app you want to learn about.
 
 ## Smart Duration Field
 
+![Smart Duration Field logo](assets/smart-duration-logo.png){ .app-card-logo }
+
 Enter, display, and search Jira duration values using familiar expressions such as `2w`, `5d`, `4h`, or `30m`. It can also compare a duration with Jira Time Spent and calculate a total from several duration fields.
 
 [Open Smart Duration Field documentation](getting-started.md){ .md-button .md-button--primary }

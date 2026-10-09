@@ -1,5 +1,7 @@
 # Create a Smart Duration field
 
+![Smart Duration Field logo](assets/smart-duration-logo.png){ .smart-duration-product-logo }
+
 You need Jira administrator permission to create a global custom field in a company-managed space. Space administrators can create fields in team-managed spaces where Jira allows it.
 
 ## 1. Open the custom fields page
