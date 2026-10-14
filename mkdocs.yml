@@ -26,6 +26,7 @@ nav:
   - FieldWas:
       - Overview: fieldwas/index.md
       - Getting started: fieldwas/getting-started.md
+      - Administrator setup: fieldwas/administration.md
       - JQL reference: fieldwas/jql.md
       - Supported field types: fieldwas/field-types.md
 
