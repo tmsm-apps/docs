@@ -29,6 +29,7 @@ nav:
       - Administrator setup: fieldwas/administration.md
       - JQL reference: fieldwas/jql.md
       - Supported field types: fieldwas/field-types.md
+      - Privacy policy: fieldwas/privacy.md
 
 markdown_extensions:
   - admonition
